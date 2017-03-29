@@ -1,0 +1,31 @@
+ function def {
+
+ while read -u 3 -r line; do
+ 
+ res="${line//[^,]}" 
+ coma="${#res}"
+ 
+  if [[ $line != *"js"*  &&  $line == *"+"*  &&  $line != *"config"* &&  $line != *"html"* &&  $line != *"report"* && $coma == 2 ]]; then
+ 
+  
+ l="${line//,*}"
+ r="${line//*,}"
+ z="${line//$l}"
+ z="${z//$r}"
+ z="${z//,}"
+ result=$line"<br>"$z
+ 
+ echo -n "${result}" >> ar.csv
+ echo  "" >> ar.csv
+ 
+ else
+ 
+ echo -n "${line}" >> ar.csv
+ echo  "" >> ar.csv
+ 
+ fi
+ 
+ done 3<ar.old.csv
+ 
+ }
+
