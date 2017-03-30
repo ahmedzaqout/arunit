@@ -5,7 +5,7 @@
  res="${line//[^,]}" 
  coma="${#res}"
  
-  if [[ $line != *"js"*  &&  $line == *"+"*  &&  $line != *"config"* &&  $line != *"html"* &&  $line != *"report"* && $coma == 2  && $line != *"setup_wizard"* &&  $line != *"hooks"* && $line != *"standard_chart_of_accounts"*  ]]; then
+  if [[ $line != *"js"*  &&  $line == *"+"*  &&  $line != *"config"* &&  $line != *"html"* &&  $line != *"report"* && $coma == 2  && $line != *"setup_wizard"* &&  $line != *"hooks"* && $line != *"standard_chart_of_accounts"*  && $line != *"setup"*  ]]; then
  
   
  l="${line//,*}"
