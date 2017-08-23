@@ -1,1 +1,0 @@
- language arabic for ErpNext 
